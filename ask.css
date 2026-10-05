@@ -1,0 +1,415 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #08090A;
+    color: gray;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #090A0B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.249);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navigation img {
+    display: block;
+    filter: invert(1);
+}
+
+/* mobile toggle: hidden on desktop */
+.nav-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* ---------- Top-level list ---------- */
+.navigation-lists {
+    display: flex;
+    align-items: center;   /* vertical alignment of every item */
+    gap: 24px;
+    list-style: none;
+}
+
+.navigation-lists li {
+    position: relative;    /* anchor for the dropdowns */
+    display: flex;
+    align-items: center;
+}
+
+/* Top-level links only (padding lives in the normal state, so hover never shifts layout) */
+.navigation-lists  li  a,
+.divider span {
+    color: rgba(255, 255, 255, 0.692);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 20px;
+    transition: background-color 0.15s ease;
+}
+
+.navigation-lists  li  a:hover {
+    background-color: #08090A;
+}
+
+/* ---------- Divider + buttons ---------- */
+.divider {
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.564);
+    font-size: 12px;
+}
+
+.divider span {
+    padding: 0;
+}
+
+.navigation-lists  li  a.login,
+.navigation-lists  li  a.signup {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.navigation-lists  li  a.login {
+    background-color: #08090A;
+    color: #fff;
+}
+
+.navigation-lists  li  a.login:hover {
+    background-color: #08090A;
+}
+
+.navigation-lists  li  a.signup {
+    background-color: #fff;
+    color: #000;
+}
+
+.navigation-lists  li  a.signup:hover {
+    background-color: #e6e6e6;
+}
+
+/* ---------- Dropdowns ---------- */
+.dropdown-menu,
+.dropdowntwo-menu {
+    display: none;
+    position: absolute;
+    top: 100%;             /* directly under the trigger, no gap to lose hover in */
+    left: 0;
+    z-index: 10;
+    background-color: #08090A;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.dropdown-menu {
+    min-width: 640px;
+}
+
+.dropdowntwo-menu {
+    min-width: 500px;
+}
+
+.product-dropdown:hover .dropdown-menu,
+.product-dropdown:focus-within .dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.resource-drop:hover .dropdowntwo-menu,
+.resource-drop:focus-within .dropdowntwo-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.dropdown-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdown-menu a,
+.dropdowntwo-menu a {
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.dropdown-menu a:hover,
+.dropdowntwo-menu a:hover {
+    background-color: #08090A;
+}
+
+.dropdown-menu h6 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dropdown-menu p {
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.4;
+}
+
+.dropdown-links a {
+    color: rgba(255, 255, 255, 0.692);
+}
+
+
+.hero-sect{
+    align-items: center;
+    text-align: center; 
+    text-align: center;
+    margin-top: 50px;
+}
+
+.a-logo{
+    position: absolute;
+    left: 570px;
+    top: 180px;
+}
+.hero-sect a button i{
+    color: black;
+}
+button{
+    padding: 14px 20px;
+    border: none;
+    color: #FFFFFF;
+    color: #000;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+span{
+    color: white;
+}
+h1{
+    color: white;
+}
+
+.frst-cont{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.frst-cont .three-icon{
+    display: flex;gap: 20px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+.frst-cont .three-icon img{
+    width: 25px;
+    padding-right: 10px;
+}
+
+/* .second-cont .seg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} */
+.four-seg{
+    background-color: #08090A;
+    display: flex;
+    margin-left: 90px;
+    margin-bottom: 160px;
+    padding: 30px;
+}
+
+.cards{
+    background-color: #08090A;
+    width: 500px;
+    height: 500px;
+    border-top: 1px solid rgba(128, 128, 128, 0.055);
+    border-bottom:1px solid rgba(128, 128, 128, 0.055) ;
+    padding: 30px;
+    border-left: 1px solid rgba(128, 128, 128, 0.055);
+
+}
+
+/* .row-one{
+    display: flex;
+} */
+
+.four-seg img{
+    margin-top: 140px;
+}
+.four-seg .crazy-image{
+    margin-top: 120px;
+    margin-left: 20px;
+}
+
+.four-seg .cards video{
+    width: 100%;
+    margin-top: 240px;
+}
+.small-logo-txt{
+    background-color: #08090A;
+    padding-top: 80px;
+    border-top: 1px solid rgba(128, 128, 128, 0.189);
+    display: flex;gap: 20px;
+    color: white;
+    justify-content: center;
+    padding-bottom: 190px;
+}
+
+.peo{
+ align-items: center;
+ text-align: center;
+ background-color: #08090A;
+
+}
+
+
+
+.peo a{
+    color: white;
+    text-decoration: none;
+}
+
+.triage-cont{
+    display: flex; gap: 80px;
+    padding-left: 250px;
+    padding-top: 160px;
+}
+
+.triage-cont .small-card{
+    background-color: #141516;
+    width: 160px;
+    height: 140px;
+    border-radius: 20px;
+    position: absolute;
+    top: 3100px;
+    right: 330px;
+    display: flex;gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid white;
+}
+
+
+
+/* .small-card span{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+} */
+
+.row-icons{
+    background-color: #08090A;
+    display: flex;
+    padding-left: 210px;
+    padding-top: 100px;
+    align-items: center;
+}
+
+.row-icons .icon, .row-icons .icon-two{
+    background-color: #08090A;
+    width: 400px;
+    height: 240px;
+    padding-top: 60px;
+    padding-bottom: 360px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.132);
+    border-top: 1px solid rgba(128, 128, 128, 0.107);
+}
+
+.row-icons .icon h5,.row-icons .icon-two h5{
+    color: white;
+    font-size: 18px;
+    padding: 30px;
+}
+.row-icons .icon  p ,.row-icons .icon-two p{
+    font-size: 14px;
+    padding-left: 30px;
+}
+
+.row-icons .icon-two{
+    border-left: 1px solid rgba(128, 128, 128, 0.176);
+}
+
+.work-flows {
+    padding-top: 100px;
+    padding-left: 220px;
+}
+
+.square-flex {
+    display: flex;gap: 30px;
+    padding-left:220px ;
+
+}
+
+.equal-square{
+    background-color: #111213;
+    width: 390px;
+    border-radius: 7px;
+    height: 400px;
+    margin-top: 30px;
+}
+a{
+    text-decoration: none;
+    color: gray;
+}
+.three-square{
+    display: flex; gap: 30px;
+    padding-left: 220px;
+    margin-top: 30px;
+}
+.three{
+    border-radius: 7px;
+    background-color: #111213;
+    width: 250px;
+    height: 250px;
+}
+
+.fix-flex{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 70px;
+}
+.fix-flex .fixed{
+    position: relative;
+}
+
+.fix-flex .unfixed{
+    margin-bottom: 0px;
+    z-index: 1000;
+}
+.vertical h5{
+    color: white;
+    font-size: 20px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(128, 128, 128, 0.16);
+}
+
+.last-cont{
+    text-align: center;
+}

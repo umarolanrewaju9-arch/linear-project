@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear – The product development system for teams and agents</title>
+    <meta name="description" content="Purpose-built for planning and building products with AI agents.">
+    <meta name="theme-color" content="#08090a">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./images/linear logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+   <nav class="navigation">
+        <a class="logo" href="https://linear.app">
+            <img src="./images/linear%20logo.svg" alt="Linear">
+        </a>
+
+        <!-- NEW: mobile menu toggle (hidden on desktop) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+        <label for="nav-toggle" class="hamburger" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="navigation-lists">
+            <li class="product-dropdown">
+                <a href="#">Products</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-col">
+                        <a href="https://linear.app/intake">
+                            <h6>Intake</h6>
+                            <p>Bring requests and content <br> in from every tool you use</p>
+                        </a>
+                        <a href="https://linear.app/ai">
+                            <h6>AI and Automation</h6>
+                            <p>Agents that follow work <br> from conversation to code</p>
+                        </a>
+                    </div>
+
+                    <div class="dropdown-col">
+                        <a href="https://linear.app/build">
+                            <h6>Build, Review and Ship</h6>
+                            <p>Write code and review <br> pull requests inside Linear</p>
+                        </a>
+                        <a href="https://linear.app/plan">
+                            <h6>Plan and Monitor</h6>
+                            <p>Set the plan and follow it <br> from idea to launch</p>
+                        </a>
+                    </div>
+
+                    <div class="dropdown-col dropdown-links">
+                        <a href="https://linear.app/integrations">Integrations Directory</a>
+                        <a href="https://linear.app/changelog">Changelog</a>
+                        <a href="https://linear.app/mobile">Mobile</a>
+                        <a href="https://linear.app/security">Security</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="resource-drop">
+                <a href="#">Resources</a>
+                <div class="dropdowntwo-menu">
+                    <div>
+                        <a href="https://linear.app/about">About
+                            <p>Meet the team and the <br> story behind Linear</p>
+                        </a>
+                        <a href="https://linear.app/careers">Careers
+                            <p>Come work with the <br> tools our team uses daily</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://linear.app/docs">Docs
+                            <p>Learn how to use every <br> part of Linear</p>
+                        </a>
+                        <a href="https://linear.app/developers">Developers
+                            <p>Build on the Linear API <br> and developer platform</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://linear.app/switch">Switch to Linear</a>
+                        <a href="https://linear.app/enterprise">For Enterprise</a>
+                        <a href="https://linear.app/startups">For Startups</a>
+                        <a href="https://linear.app/download">Download</a>
+                    </div>
+                </div>
+                
+            </li>
+
+            <li><a href="https://linear.app/customers">Customers</a></li>
+            <li><a href="https://linear.app/pricing">Pricing</a></li>
+            <li><a href="https://linear.app/now">Now</a></li>
+            <li><a href="https://linear.app/contact">Contact</a></li>
+
+            <li class="divider">
+                <span>|</span>
+                <a class="login" href="https://linear.app/login">Log in</a>
+                <a class="signup" href="https://linear.app/signup">Sign up</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- ===== Hero ===== -->
+    <section class="second-container">
+
+        <h1>The product development <br>
+            system for teams and agents</h1>
+
+        <p>Purpose-built for planning and building products. <br> Designed for the AI era.</p>
+
+        <div class="hero-badges">
+            <a href="https://linear.app/now/introducing-loops">New</a>
+            <a href="https://linear.app/now/introducing-loops">Loops <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="hero-image">
+            <img src="./images/second container.png" alt="Linear app dashboard screenshot">
+        </div>
+
+
+    </section>
+    <!-- marquee -->
+    <!-- <marquee class="third-marq">
+            <a href="https://linear.app/customers"><img src="./images/open.png" alt="OpenAI"></a>
+            <a href="https://linear.app/customers"><img src="./images/vercel.png" alt="Vercel"></a>
+            <a href="https://linear.app/customers"><img src="./images/salesforce.png" alt="Salesforce"></a>
+            <a href="https://linear.app/customers"><img src="./images/figma.png" alt="Figma"></a>
+            <a href="https://linear.app/customers"><img src="./images/cursor.png" alt="Cursor"></a>
+            <a href="https://linear.app/customers"><img src="./images/coinbase.png" alt="Coinbase"></a>
+            <a href="https://linear.app/customers"><img src="./images/ramp.png" alt="Ramp"></a>
+        </marquee> -->
+
+    <!-- ===== Logos + Features ===== -->
+    <section class="third-container">
+
+        <div class="third">
+            <a href="https://linear.app/customers"><img src="./images/open.png" alt="OpenAI"></a>
+            <a href="https://linear.app/customers"><img src="./images/vercel.png" alt="Vercel"></a>
+            <a href="https://linear.app/customers"><img src="./images/salesforce.png" alt="Salesforce"></a>
+            <a href="https://linear.app/customers"><img src="./images/figma.png" alt="Figma"></a>
+            <a href="https://linear.app/customers"><img src="./images/cursor.png" alt="Cursor"></a>
+            <a href="https://linear.app/customers"><img src="./images/coinbase.png" alt="Coinbase"></a>
+            <a href="https://linear.app/customers"><img src="./images/ramp.png" alt="Ramp"></a>
+        </div>
+        <p class="powered-by">Powering the companies building the future</p>
+
+        <h1>A new species of product tool.<span> Purpose-built for modern <br> teams with AI workflows at its core, Linear sets a new <br> standard for planning and building products.</span></h1>
+
+        <div class="blocks">
+            <div class="card">
+                <span class="fig-label">FIG 0.1</span>
+                <div class="card-img"><img src="./images/flat block.svg" alt=""></div>
+                <strong>Purpose-built</strong>
+                <p>Linear is shaped by the practices and principles of world-class product teams.</p>
+            </div>
+
+            <div class="card">
+                <span class="fig-label">FIG 0.2</span>
+                <div class="card-img"><img src="./images/cube blocks.svg" alt=""></div>
+                <strong>Powered by agents</strong>
+                <p>Designed for workflows shared by humans and agents. From drafting PRDs to pushing PRs.</p>
+            </div>
+
+            <div class="card">
+                <span class="fig-label">FIG 0.3</span>
+                <div class="card-img"><img src="./images/vertical wall.svg" alt=""></div>
+                <strong>Designed for speed</strong>
+                <p>Reduces noise and restores momentum to help teams ship with high velocity and focus.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== Intake ===== -->
+    <section class="fourth-container">
+        <div class="texts">
+            <h2>Intake <br>and integrations</h2>
+            <p>Automatically turn conversations and customer <br> feedback into actionable issues that are instantly <br>routed,
+                labeled, and prioritized for the right team.
+                <br><br>
+                <a href="https://linear.app/intake">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            </p>
+        </div>
+
+        <img src="./images/lena dideha.png" alt="Intake board showing routed issues">
+
+        <!-- <div class="feature-pills">
+            <span>Linear Agent</span>
+            <span>Customer Requests</span>
+            <span>Triage</span>
+            <span>Linear Asks</span>
+        </div> -->
+    </section>
+
+    <!-- ===== Integrations accordion ===== -->
+    <section class="getboot">
+
+        <div class="linearagent-customer">
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions">
+                Linear Agent <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <p class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Tech specs</p>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Linear Agent</h1>
+                    <p>The Linear Agent is an AI agent available in Linear's intake integrations. It converts supported
+                        conversations into Linear issues by extracting requests, summarizing context, and populating
+                        issue fields.</p>
+
+                    <img class="bootimg" src="./images/bootstrap.png" alt="Linear Agent in Slack">
+                    <p class="slackpara">LINEAR AGENT IN SLACK</p>
+
+                    <h5>Integrations</h5>
+                    <table>
+                        <tr>
+                            <td class="frst-td">Integration</td>
+                            <td class="snd-td">Details</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">AI</td>
+                            <td class="snd-td">Seamless integration with Linear's AI capabilities</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">Slack</td>
+                            <td class="snd-td">Converts Slack threads into issues by mentioning @Linear. The agent uses
+                                the full thread context to auto-generate issues with title, summary, and supporting
+                                details. Conversations containing multiple distinct requests can generate multiple
+                                issues.</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">Microsoft Teams</td>
+                            <td class="snd-td">Converts Teams conversations into issues by mentioning @Linear. The agent
+                                uses the full conversation context to auto-generate issues with title, summary, and
+                                supporting details. Conversations containing multiple distinct requests can generate
+                                multiple issues.</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">Intercom</td>
+                            <td class="snd-td">Converts Intercom conversations into issues. The agent analyzes the full
+                                conversation and files issues for relevant bugs or feature requests. Issues include
+                                concise summaries, key details, and relevant screenshots. Conversations containing
+                                multiple distinct requests can generate multiple issues.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2"
+                aria-controls="offcanvas2">
+                Customer Requests <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas2"
+                aria-labelledby="offcanvas2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvas2Label">Tech Specs</h5>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Customer requests</h1>
+                    <p>Customer Requests links customer feedback and customer metadata to issues and projects in Linear.
+                        Requests can be created manually or through supported integrations, and customer data can be
+                        used for filtering, prioritization, and reporting across the workspace.</p>
+                    <img src="./images/image.png" alt="Customer page with associated issues and projects">
+                    <p class="slackpara">CUSTOMER PAGE WITH ASSOCIATED ISSUES AND PROJECTS</p>
+
+                    <h4>Integrations</h4>
+                    <p>Customer Requests works with a variety of integrations to create requests and optionally sync
+                        customer attributes.</p>
+                    <img src="./images/small table.png" alt="Integration options table">
+                </div>
+            </div>
+        </div>
+
+        <div class="triage-linear">
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3"
+                aria-controls="offcanvas3">
+                Triage <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas3"
+                aria-labelledby="offcanvas3Label">
+                <div class="offcanvas-header">
+                    <p class="offcanvas-title" id="offcanvas3Label">Tech Specs</p>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Triage</h1>
+                    <p>Triage is an AI-powered inbox for teams to manage unplanned work such as incoming bug reports and
+                        feature requests. When an issue is created by an integration or by a user not belonging to a
+                        specific Linear team, it will appear here. Triage offers an opportunity to review, update, and
+                        prioritize issues before they are added to the team's workflow.</p>
+                </div>
+            </div>
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas4"
+                aria-controls="offcanvas4">
+                Linear Asks <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas4"
+                aria-labelledby="offcanvas4Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvas4Label">Linear Asks</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Linear Asks</h1>
+                    <p>Linear Asks lets anyone in a Slack or Teams workspace raise a request without needing a Linear
+                        seat, so requests from across the company can reach the right team.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===== Planning and monitoring ===== -->
+    <section class="planning-container">
+        <div class="texts">
+            <h2>Planning <br>and monitoring</h2>
+            <p>Plan and navigate from idea to launch. Align your team with product initiatives, strategic roadmaps, and
+                clear, up-to-date PRDs.
+                <br><br>
+                <a href="https://linear.app/plan">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            </p>
+        </div>
+
+        <img src="./images/cycle time by agent.png" alt="Roadmap timeline for a UI refresh initiative">
+
+        <div class="feature-pills">
+            <span>Projects</span>
+            <span>Documents</span>
+            <span>Pulse</span>
+            <span>Initiatives</span>
+            <span>Visual planning</span>
+            <span>Insights</span>
+        </div>
+    </section>
+
+    <!-- ===== AI and automations ===== -->
+    <section class="fifth-container">
+        <div class="automation-txt">
+            <h2>AI and <br>automations</h2>
+            <p>Build and deploy AI agents that work alongside you as teammates. Work on complex tasks together or
+                delegate entire issues end-to-end.
+                <a href="https://linear.app/ai">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            </p>
+        </div>
+
+        <div class="ai-media">
+            <video class="video-a" autoplay loop muted playsinline
+                src="./videos/Screen Recording 2026-09-21 130448.mp4"></video>
+            
+        </div>
+
+        <p>Features</p>
+
+          <section class="getboot">
+
+        <div class="linearagent-customer">
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions">
+                Linear Agent <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <p class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Tech specs</p>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Linear Agent</h1>
+                    <p>The Linear Agent is an AI agent available in Linear's intake integrations. It converts supported
+                        conversations into Linear issues by extracting requests, summarizing context, and populating
+                        issue fields.</p>
+
+                    <img class="bootimg" src="./images/bootstrap.png" alt="Linear Agent in Slack">
+                    <p class="slackpara">LINEAR AGENT IN SLACK</p>
+
+                    <h5>Integrations</h5>
+                    <table>
+                        <tr>
+                            <td class="frst-td">Integration</td>
+                            <td class="snd-td">Details</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">AI</td>
+                            <td class="snd-td">Seamless integration with Linear's AI capabilities</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">Slack</td>
+                            <td class="snd-td">Converts Slack threads into issues by mentioning @Linear. The agent uses
+                                the full thread context to auto-generate issues with title, summary, and supporting
+                                details. Conversations containing multiple distinct requests can generate multiple
+                                issues.</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">Microsoft Teams</td>
+                            <td class="snd-td">Converts Teams conversations into issues by mentioning @Linear. The agent
+                                uses the full conversation context to auto-generate issues with title, summary, and
+                                supporting details. Conversations containing multiple distinct requests can generate
+                                multiple issues.</td>
+                        </tr>
+                        <tr>
+                            <td class="frst-td">Intercom</td>
+                            <td class="snd-td">Converts Intercom conversations into issues. The agent analyzes the full
+                                conversation and files issues for relevant bugs or feature requests. Issues include
+                                concise summaries, key details, and relevant screenshots. Conversations containing
+                                multiple distinct requests can generate multiple issues.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2"
+                aria-controls="offcanvas2">
+                Customer Requests <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas2"
+                aria-labelledby="offcanvas2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvas2Label">Tech Specs</h5>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Customer requests</h1>
+                    <p>Customer Requests links customer feedback and customer metadata to issues and projects in Linear.
+                        Requests can be created manually or through supported integrations, and customer data can be
+                        used for filtering, prioritization, and reporting across the workspace.</p>
+                    <img src="./images/image.png" alt="Customer page with associated issues and projects">
+                    <p class="slackpara">CUSTOMER PAGE WITH ASSOCIATED ISSUES AND PROJECTS</p>
+
+                    <h4>Integrations</h4>
+                    <p>Customer Requests works with a variety of integrations to create requests and optionally sync
+                        customer attributes.</p>
+                    <img src="./images/small table.png" alt="Integration options table">
+                </div>
+            </div>
+        </div>
+
+        <div class="triage-linear">
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3"
+                aria-controls="offcanvas3">
+                Triage <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas3"
+                aria-labelledby="offcanvas3Label">
+                <div class="offcanvas-header">
+                    <p class="offcanvas-title" id="offcanvas3Label">Tech Specs</p>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Triage</h1>
+                    <p>Triage is an AI-powered inbox for teams to manage unplanned work such as incoming bug reports and
+                        feature requests. When an issue is created by an integration or by a user not belonging to a
+                        specific Linear team, it will appear here. Triage offers an opportunity to review, update, and
+                        prioritize issues before they are added to the team's workflow.</p>
+                </div>
+            </div>
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas4"
+                aria-controls="offcanvas4">
+                Linear Asks <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas4"
+                aria-labelledby="offcanvas4Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvas4Label">Linear Asks</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <h1>Linear Asks</h1>
+                    <p>Linear Asks lets anyone in a Slack or Teams workspace raise a request without needing a Linear
+                        seat, so requests from across the company can reach the right team.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </section>
+
+    <!-- ===== Build / Review / Ship ===== -->
+    <section class="yoo">
+        <div class="sxth">
+            <div class="sxth-text">
+                <h1>Build, Review,<br>and Ship.</h1>
+                <p>
+                    Streamline code reviews with clear diffs, better context, and fewer back-and-forth comments. Keep
+                    PRs moving without sacrificing quality.
+                    <br><br>
+                    <a href="https://linear.app/build">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                </p>
+            </div>
+            <img class="diff-img" src="./images/kinetic-ios.png" alt="Code diff for a review">
+        </div>
+
+        <div class="feature-pills">
+            <span>Issues</span>
+            <span>Git automations</span>
+            <span>Guided reviews</span>
+            <span>Cycles</span>
+            <span>Diffs</span>
+            <span>Releases</span>
+        </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <!-- <section class="testimonials">
+        <div class="testimonial-grid">
+            <blockquote>
+                <p>"Using Linear noticeably sharpens the way our team thinks about building product."</p>
+                <cite>Gabriel Peal, Staff Software Engineer — OpenAI</cite>
+            </blockquote>
+            <blockquote>
+                <p>"We move fast, and Linear keeps us biased toward action."</p>
+                <cite>Nik Koblov, Head of Engineering — Ramp</cite>
+            </blockquote>
+            <blockquote>
+                <p>"Linear is excellent — it has the right opinions for fast-moving teams."</p>
+                <cite>Kaz Nejatian — Opendoor</cite>
+            </blockquote>
+        </div>
+
+        <p class="customer-count">Linear powers over <strong>40,000</strong> product teams. From ambitious startups to
+            major enterprises.</p>
+        <a class="customer-stories-link" href="https://linear.app/customers">Customer stories <i
+                class="fa-solid fa-arrow-right"></i></a>
+    </section> -->
+
+    <!-- changelog -->
+
+    <div class="changelog">
+        <h1>Changelog</h1>
+
+        <div class="lines"><div class="line"><div class="dot"><img src="./images/red simple dot.png" alt="" width=""></div></div>
+        <div class="line"><div class="dot"></div><img src="./images/simple dot.png" alt=""></div>
+        <div class="line"><div class="dot"></div><img src="./images/simple dot.png" alt=""></div>
+        <div class="line"><div class="dot"></div><img src="./images/simple dot.png" alt=""></div></div>
+
+        <div class="change-flex">
+            <div><h6>New controls for Linear coding agent</h6><p>
+Coding sessions are the shortest path <br> from issue to diff. Assign a task to..</p></div>
+            <div><h6>Loops for product management
+</h6><p>
+Loops are recurring agent workflows <br> for teams. They now respond to more...</p>
+<span>Sep 10, 2026</span></div>
+            <div><h6>Priority inbox</h6><p>
+An active workspace can create a <br> significant amount of notifications..</p><span>
+Sep 3, 2026</span></div>
+            <div><h6>Coding sessions</h6><p>
+Linear Agent can now set up, run, and <br> test your code before returning its..</p><span>
+Aug 19, 2026</span></div>
+        </div>
+
+        <a href="#">view all <i
+                class="fa-solid fa-arrow-right"></i></a>
+<br><br><br><br><br><br>
+    <div class="longest"><img src="./images/longest.png" alt=""></div>      
+    
+    <div class="chang-txt-flx">
+        <p>Linear powers over 40,000 product teams. From ambitious startups to major enterprises.</p>
+
+        <a href="#">Customer stories <i
+                class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    </div>
+
+    <!-- ===== Final CTA ===== -->
+    <section class="final-cta">
+        <h2>Built for the future.<br>Available today.</h2>
+        <div class="cta-buttons">
+            <a class="signup-button" href="https://linear.app/signup">Get started</a>
+            <a class="login-button" href="https://linear.app/contact/sales">Contact sales</a>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <div class="footer">
+    <div class="child">
+        <img src="./images/white linear logo.png" alt="">
+    </div>
+    <div class="child">
+        <ul>
+            <li>Products</li>
+            <a href="https://linear.app/intake">Intakes</a>
+            <a href="https://linear.app/plan">Plan</a>
+        </ul>
+    </div>
+    <div class="child">
+        <ul>
+        <li>Features</li>
+        <a href="https://linear.app/asks">Asks</a>
+        <a href="https://linear.app/agents">Agents</a></ul>
+    </div>
+    <div class="child">
+        <ul>
+            <li>Companies</li>
+            <a href="https://linear.app/about">About</a>
+            <a href="#">Customers</a>
+            <a href="#">Carrer</a>
+            <a href="#">Now</a>
+            <a href="./method.html">method</a>
+            <a href="#">Quality</a>
+            <a href="./brand.html">Brand</a>
+        </ul>
+    </div>
+    <div class="child">
+        <ul>
+        <li>Resources</li>
+        <a href="#">Switch</a>
+        <a href="#">Download</a>
+        <a href="#">Documentations</a>
+        <a href="#">Developers</a>
+        <a href="#">Status</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Start up</a>
+        </ul>
+    </div>
+    <div class="child">
+        <ul>
+        <li>Connect</li>
+        <a href="#">Contact us</a>
+        <a href="#">commmunity</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">GitHub</a>
+        <a href="#">YouTube</a></ul>
+    </div>
+</div>
+<div class="privacy-co">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">DPA</a>
+        <a href="#">AUP</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        // Simple mobile nav toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function () {
+            document.querySelector('.frst-container').classList.toggle('open');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+        });
+    </script>
+</body>
+
+</html>

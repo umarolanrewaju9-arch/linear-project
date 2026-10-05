@@ -1,0 +1,598 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #090A0B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.249);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navigation img {
+    display: block;
+    filter: invert(1);
+}
+
+/* mobile toggle: hidden on desktop */
+.nav-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* ---------- Top-level list ---------- */
+.navigation-lists {
+    display: flex;
+    align-items: center;   /* vertical alignment of every item */
+    gap: 24px;
+    list-style: none;
+}
+
+.navigation-lists li {
+    position: relative;    /* anchor for the dropdowns */
+    display: flex;
+    align-items: center;
+}
+
+/* Top-level links only (padding lives in the normal state, so hover never shifts layout) */
+.navigation-lists  li  a,
+.divider span {
+    color: rgba(255, 255, 255, 0.692);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 20px;
+    transition: background-color 0.15s ease;
+}
+
+.navigation-lists  li  a:hover {
+    background-color: #1D1E1F;
+}
+
+/* ---------- Divider + buttons ---------- */
+.divider {
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.564);
+    font-size: 12px;
+}
+
+.divider span {
+    padding: 0;
+}
+
+.navigation-lists  li  a.login,
+.navigation-lists  li  a.signup {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.navigation-lists  li  a.login {
+    background-color: #000;
+    color: #fff;
+}
+
+.navigation-lists  li  a.login:hover {
+    background-color: #1D1E1F;
+}
+
+.navigation-lists  li  a.signup {
+    background-color: #fff;
+    color: #000;
+}
+
+.navigation-lists  li  a.signup:hover {
+    background-color: #e6e6e6;
+}
+
+/* ---------- Dropdowns ---------- */
+.dropdown-menu,
+.dropdowntwo-menu {
+    display: none;
+    position: absolute;
+    top: 100%;             /* directly under the trigger, no gap to lose hover in */
+    left: 0;
+    z-index: 10;
+    background-color: #1D1E1F;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.dropdown-menu {
+    min-width: 640px;
+}
+
+.dropdowntwo-menu {
+    min-width: 500px;
+}
+
+.product-dropdown:hover .dropdown-menu,
+.product-dropdown:focus-within .dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.resource-drop:hover .dropdowntwo-menu,
+.resource-drop:focus-within .dropdowntwo-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.dropdown-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdown-menu a,
+.dropdowntwo-menu a {
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.dropdown-menu a:hover,
+.dropdowntwo-menu a:hover {
+    background-color: #2a2b2d;
+}
+
+.dropdown-menu h6 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dropdown-menu p {
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.4;
+}
+
+.dropdown-links a {
+    color: rgba(255, 255, 255, 0.692);
+}
+
+/* ---------- Hero ---------- */
+.frst-container {
+    background-color: #08090A;
+    color: rgba(255, 255, 255, 0.509);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(140px, 14vw, 265px) 20px clamp(120px, 13vw, 250px);
+    font-family: Tiempos Headline, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+.frst-container .para {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(14px, 1.2vw, 20px);
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: clamp(16px, 2vw, 32px);
+}
+
+.frst-container h1 {
+    font-size: clamp(44px, 8vw, 152px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #F7F8F8;
+}
+
+.paratwo {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(16px, 1.3vw, 24px);
+    line-height: 1.5;
+    margin-top: clamp(24px, 3vw, 44px);
+    max-width: 680px;
+}
+
+
+/* .second{
+    background-color: #08090A;
+    display: flex;
+    padding-left: auto;
+    justify-content: center;
+    position: relative;
+}
+
+.second .circle{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #08090A;
+    border: 1px solid rgba(255, 255, 255, 0.459);
+    border-style: dashed;
+    border-top-color:white;
+    border-top-style: solid;
+    display: flex;
+    position: relative;
+    
+}
+
+.second .circletwo{
+    position: relative;
+}  */
+
+.second {
+    --size: 500px;                 /* circle diameter: change this one value to resize everything */
+    --bw: 1px;                     /* dashed border width */
+    --shift: calc(var(--size) * 0.582);   /* distance between the two centers */
+ 
+    background-color: #08090A;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 60px 0;
+}
+ 
+/* ---------- Both circles share the same look ---------- */
+.second .circle,
+.second .circletwo {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: transparent;     /* transparent so the hatched overlap shows through */
+    border: var(--bw) dashed rgba(255, 255, 255, 0.459);
+    position: relative;
+}
+ 
+/* second circle slides left to overlap the first */
+.second .circletwo {
+    margin-left: calc(var(--size) * -0.418);
+}
+ 
+/* ---------- Spinning bright arc (replaces your static border-top) ---------- */
+.second .circle::before,
+.second .circletwo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #fff;            /* one solid side = one tapered arc */
+    -webkit-mask-image: conic-gradient(from -25deg, #000 50deg, transparent 50deg);
+            mask-image: conic-gradient(from -25deg, #000 50deg, transparent 50deg);
+    animation: spin 8s linear infinite;
+}
+ 
+.second .circletwo::before {
+    animation-delay: -6s;              /* arcs don't move in sync */
+}
+ 
+@keyframes spin {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+ 
+/* ---------- Hatched overlap ---------- */
+/* a copy of the second circle, clipped to the first circle */
+.second .circle {
+    overflow: hidden;
+}
+ 
+.second .circle::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--bw) * -1);
+    left: calc(var(--shift) - var(--bw));
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent 0 6px,
+        rgba(255, 255, 255, 0.13) 6px 7px
+    );
+}
+
+
+.table {
+    background-color: #08090A;
+    color: white;
+    text-align: left;                 /* was center: rows are left-aligned in your image */
+    padding: 48px 24px 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+}
+
+.table ul {
+    max-width: 930px;                 /* keeps the list a readable width and centered */
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+/* ---------- Section headings (INTRODUCTION, DIRECTIONS) ---------- */
+.table li {
+    margin-top: 40px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.table li:first-child {
+    margin-top: 0;
+}
+
+/* ---------- Link groups ---------- */
+/* dashed divider after every group except the last */
+.link-row:not(:last-child) {
+    padding-bottom: 34px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.link-row a {
+    display: flex;
+    justify-content: space-between;   /* was space-around: title left, number right */
+    align-items: baseline;
+    gap: 16px;
+    padding: 8px 0;
+}
+
+.table a {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    transition: color 0.15s ease;
+}
+
+.link-row a:hover,
+.link-row a:hover span:last-child {
+    color: #fff;
+}
+
+/* the number on the right */
+.link-row a span:last-child {
+    flex-shrink: 0;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.45);
+    transition: color 0.15s ease;
+}
+
+.footer{
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer img{
+    padding-top:30px;
+    width: 28px;
+}
+.footer .child ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.footer .child ul li{
+    list-style: none;
+}
+.footer .child a{
+    color: rgba(255, 255, 255, 0.452);
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 15px;
+}
+.footer .child a:hover{
+    color: white;
+}
+.privacy-co{
+    background-color: #000;
+    padding-left: 270px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.privacy-co a{
+    color: rgba(255, 255, 255, 0.461);
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 20px;
+    
+}
+.privacy-co a:hover{
+    color: rgba(255, 255, 255, 0.655);
+}
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .table {
+        padding: 32px 16px 56px;
+    }
+
+    .table li {
+        margin-top: 32px;
+        font-size: 13px;
+    }
+
+    .link-row:not(:last-child) {
+        padding-bottom: 26px;
+    }
+
+    .link-row a {
+        gap: 12px;
+        padding: 7px 0;
+    }
+}
+/* ---------- Media queries ---------- */
+ 
+/* Tablet */
+@media (max-width: 900px) {
+    .second {
+        --size: 45vw;
+        padding: 40px 0;
+    }
+    .second .circle::before,
+    .second .circletwo::before {
+        border-width: 3px;
+        animation-duration: 10s;
+    }
+}
+ 
+/* Phone */
+@media (max-width: 600px) {
+    .second {
+        --size: 58vw;
+        --bw: 2px;
+        padding: 28px 0;
+    }
+    .second .circle::before,
+    .second .circletwo::before {
+        border-width: 4px;
+        animation-duration: 8s;
+    }
+    .second .circle::after {
+        background: repeating-linear-gradient(
+            45deg,
+            transparent 0 5px,
+            rgba(255, 255, 255, 0.18) 5px 7px
+        );
+    }
+}
+ 
+/* Respect users who turn off motion */
+@media (prefers-reduced-motion: reduce) {
+    .second .circle::before,
+    .second .circletwo::before {
+        animation: none;
+    }
+}
+ 
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .navigation {
+        padding: 16px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-toggle:focus-visible + .hamburger {
+        outline: 2px solid #fff;
+        border-radius: 6px;
+    }
+
+    .nav-toggle:checked + .hamburger span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .nav-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* menu panel */
+    .navigation-lists {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background-color: #090A0B;
+        padding: 16px 20px 24px;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.249);
+    }
+
+    .nav-toggle:checked ~ .navigation-lists {
+        display: flex;
+    }
+
+    .navigation-lists li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navigation-lists > li > a {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+
+    /* dropdowns open inline instead of floating */
+    .dropdown-menu,
+    .dropdowntwo-menu {
+        position: static;
+        min-width: 0;
+        background-color: transparent;
+        padding: 0 0 0 8px;
+    }
+
+    .product-dropdown:hover .dropdown-menu,
+    .product-dropdown:focus-within .dropdown-menu,
+    .resource-drop:hover .dropdowntwo-menu,
+    .resource-drop:focus-within .dropdowntwo-menu {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .divider {
+        flex-direction: row;
+        padding-top: 12px;
+    }
+
+    .divider span {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .paratwo br {
+        display: none;
+    }
+}
