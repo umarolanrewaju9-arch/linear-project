@@ -413,3 +413,46 @@ a{
 .last-cont{
     text-align: center;
 }
+.footer{
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer img{
+    padding-top:30px;
+    width: 28px;
+}
+.footer .child ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.footer .child ul li{
+    list-style: none;
+}
+.footer .child a{
+    color: rgba(255, 255, 255, 0.452);
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 15px;
+}
+.footer .child a:hover{
+    color: white;
+}
+.privacy-co{
+    background-color: #000;
+    padding-left: 270px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.privacy-co a{
+    color: rgba(255, 255, 255, 0.461);
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 20px;
+    
+}
+.privacy-co a:hover{
+    color: rgba(255, 255, 255, 0.655);
+}
