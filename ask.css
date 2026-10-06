@@ -179,6 +179,10 @@ body{
     line-height: 1.4;
 }
 
+.dropdown-menu .dropdown-col p:hover{
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
 .dropdown-links a {
     color: rgba(255, 255, 255, 0.692);
 }
